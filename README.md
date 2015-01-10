@@ -1,7 +1,7 @@
 #Readme
 
 ## Contents
-This repository contains 4 R files and 4 png images. The 4 R files can be run in R directly and will output the subsequent png image (plot1.R creates plot1.png and so on)
+This repository contains 4 R files and 4 png images. The 4 R files can be run in R directly and will output the subsequent png image (plot1.R creates plot1.png)
 
 ## Description of original data
 
