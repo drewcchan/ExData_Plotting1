@@ -13,7 +13,7 @@ database<-fread(files[1], na.strings="?")
 datasubset<-filter(database,Date=="1/2/2007"|Date=="2/2/2007")%>%
         mutate(Datetime=dmy_hms(paste(Date,Time)))
 
-#Creating Plot 4 as a png file
+#Creating plot 4 as a png file
 png(file="plot4.png",width=480, height=480)
 #Splits into 2x2 area
 par(mfrow=c(2,2))
@@ -27,7 +27,7 @@ plot(x=datasubset$Datetime,y=as.numeric(datasubset$Sub_metering_1), type="l",
 lines(x=datasubset$Datetime,y=as.numeric(datasubset$Sub_metering_2),col='Red')
 lines(x=datasubset$Datetime,y=as.numeric(datasubset$Sub_metering_3),col='Blue')
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), col=c("black","red","blue"),lty=1,lwd=2,bty="n")
-#Bottom-left plot
+#Bottom-right plot
 plot(x=datasubset$Datetime, y=as.numeric(datasubset$Global_reactive_power), type="l",xlab="datetime", ylab="Global_reactive_power")
 #Closing png graphic device
 dev.off()

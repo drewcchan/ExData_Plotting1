@@ -13,7 +13,7 @@ database<-fread(files[1], na.strings="?")
 datasubset<-filter(database,Date=="1/2/2007"|Date=="2/2/2007")%>%
         mutate(Datetime=dmy_hms(paste(Date,Time)))
 
-#Creating plot 3 as a graphic device
+#Creating plot 3 as a png file
 png(file="plot3.png",width=480, height=480)
 #Creates plotting area for Sub_metering_1 vs datetime
 plot(x=datasubset$Datetime,y=as.numeric(datasubset$Sub_metering_1), type="l",
